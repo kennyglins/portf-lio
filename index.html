@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kennedy Lins | Portfólio</title>
+    <style>
+      /* ======== RESET ======== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #0e0e0e;
+        color: #f5f5f5;
+        line-height: 1.6;
+      }
+
+      /* ======== HEADER ======== */
+      header {
+        text-align: center;
+        padding: 4rem 1rem 2rem;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        color: #00ffae;
+        margin-bottom: 0.5rem;
+      }
+
+      header p {
+        color: #ccc;
+        font-size: 1.1rem;
+      }
+
+      /* ======== MAIN ======== */
+      main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .project {
+        background: #1a1a1a;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(0, 255, 174, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .project:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 0 25px rgba(0, 255, 174, 0.4);
+      }
+
+      .project img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .project-content {
+        padding: 1.5rem;
+      }
+
+      .project-content h2 {
+        color: #00ffae;
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .project-content p {
+        font-size: 1rem;
+        color: #ddd;
+        margin-bottom: 1rem;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.6rem 1.2rem;
+        background: #00ffae;
+        color: #000;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s ease;
+      }
+
+      .btn:hover {
+        background: #00d494;
+      }
+
+      /* ======== FOOTER ======== */
+      footer {
+        text-align: center;
+        padding: 2rem 1rem;
+        color: #777;
+        font-size: 0.9rem;
+        border-top: 1px solid #222;
+      }
+
+      /* ======== RESPONSIVIDADE ======== */
+      @media (max-width: 768px) {
+        header {
+          padding: 2rem 1rem;
+        }
+        header h1 {
+          font-size: 2rem;
+        }
+        header p {
+          font-size: 1rem;
+        }
+        main {
+          padding: 1rem;
+          gap: 1.5rem;
+        }
+        .project img {
+          height: 180px;
+        }
+        .project-content h2 {
+          font-size: 1.2rem;
+        }
+        .project-content p {
+          font-size: 0.95rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        header h1 {
+          font-size: 1.8rem;
+        }
+        .btn {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Kennedy Lins</h1>
+      <p>Desenvolvedor FullStack | Estudante de ADS</p>
+    </header>
+
+    <main>
+      <div class="project">
+        <img src="audiobookjs.jpg" alt="Audiobook em JavaScript" />
+        <div class="project-content">
+          <h2>Audiobook em JavaScript</h2>
+          <p>
+            Projeto desenvolvido durante o workshop da Hashtag Treinamentos, com
+            leitura automática e controles de reprodução.
+          </p>
+          <a href="#" class="btn">Ver Projeto</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="cardapiodigitalreact.jpg" alt="Cardápio Digital em React" />
+        <div class="project-content">
+          <h2>Cardápio Digital em React</h2>
+          <p>
+            Interface moderna simulando um app de pedidos online, feita com
+            React, HTML e JavaScript.
+          </p>
+          <a href="#" class="btn">Ver Projeto</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>© 2025 Kennedy Lins — Todos os direitos reservados</footer>
+  </body>
+</html>
