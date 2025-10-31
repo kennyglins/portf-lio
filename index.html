@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kennedy Lins | Portfólio</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
     <style>
       /* ======== RESET ======== */
       * {
@@ -166,8 +167,31 @@
           font-size: 1.8rem;
         }
         .btn {
-          font-size: 0.9rem;
-        }
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #00ffae;
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  min-width: 120px; /* garante largura mínima uniforme */
+}
+
+.btn:hover {
+  background: #00d494;
+  transform: translateY(-2px);
+}
+
+/* mantém o espaçamento dos botões dentro dos cards iguais */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
       }
     </style>
   </head>
