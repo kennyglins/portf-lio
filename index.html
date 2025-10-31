@@ -14,7 +14,7 @@
 
       body {
         font-family: "Poppins", sans-serif;
-        background: #0e0e0e;
+        background: linear-gradient(160deg, #0e0e0e, #111111, #0b0b0b);
         color: #f5f5f5;
         line-height: 1.6;
       }
@@ -26,7 +26,7 @@
       }
 
       header h1 {
-        font-size: 2.5rem;
+        font-size: 2.6rem;
         color: #00ffae;
         margin-bottom: 0.5rem;
       }
@@ -46,11 +46,70 @@
         margin: 0 auto;
       }
 
+      /* ======== PROJETO DESTAQUE ======== */
+      .project-featured {
+        grid-column: 1 / -1;
+        background: linear-gradient(180deg, #1a1a1a, #141414);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 0 30px rgba(0, 255, 174, 0.25);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .project-featured:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 40px rgba(0, 255, 174, 0.5);
+      }
+
+      .project-featured img {
+        width: 100%;
+        height: 340px;
+        object-fit: cover;
+      }
+
+      .project-content {
+        padding: 1.8rem;
+      }
+
+      .project-content h2 {
+        color: #00ffae;
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .project-content p {
+        font-size: 1.05rem;
+        color: #ddd;
+        margin-bottom: 1.2rem;
+      }
+
+      .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.6rem 1.3rem;
+        background: #00ffae;
+        color: #000;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s ease;
+      }
+
+      .btn:hover {
+        background: #00d494;
+      }
+
+      /* ======== OUTROS PROJETOS ======== */
       .project {
         background: #1a1a1a;
         border-radius: 16px;
         overflow: hidden;
-        box-shadow: 0 0 15px rgba(0, 255, 174, 0.2);
+        box-shadow: 0 0 15px rgba(0, 255, 174, 0.15);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
@@ -65,11 +124,7 @@
         object-fit: cover;
       }
 
-      .project-content {
-        padding: 1.5rem;
-      }
-
-      .project-content h2 {
+      .project-content h3 {
         color: #00ffae;
         font-size: 1.4rem;
         margin-bottom: 0.5rem;
@@ -79,21 +134,6 @@
         font-size: 1rem;
         color: #ddd;
         margin-bottom: 1rem;
-      }
-
-      .btn {
-        display: inline-block;
-        padding: 0.6rem 1.2rem;
-        background: #00ffae;
-        color: #000;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: background 0.3s ease;
-      }
-
-      .btn:hover {
-        background: #00d494;
       }
 
       /* ======== FOOTER ======== */
@@ -111,23 +151,13 @@
           padding: 2rem 1rem;
         }
         header h1 {
-          font-size: 2rem;
+          font-size: 2.2rem;
         }
-        header p {
-          font-size: 1rem;
-        }
-        main {
-          padding: 1rem;
-          gap: 1.5rem;
-        }
-        .project img {
-          height: 180px;
+        .project-featured img {
+          height: 240px;
         }
         .project-content h2 {
-          font-size: 1.2rem;
-        }
-        .project-content p {
-          font-size: 0.95rem;
+          font-size: 1.5rem;
         }
       }
 
@@ -148,33 +178,43 @@
     </header>
 
     <main>
+      <!-- ======== PROJETO DESTAQUE ======== -->
+      <div class="project-featured">
+        <img src="capaaskly.png" alt="Askly - Projeto Full Stack" />
+        <div class="project-content">
+          <h2>Askly (Full Stack)</h2>
+          <p>
+            Aplicação completa inspirada no <em>Let Me Ask</em> da Rocketseat. Desenvolvida com Node.js, Fastify, TypeScript, PostgreSQL, Docker, React e TanStack Query. 
+            Permite criar salas, enviar perguntas por texto ou áudio e receber respostas automáticas de IA em tempo real.
+          </p>
+          <div class="btn-group">
+            <a href="#" class="btn">Ver Demo</a>
+            <a href="https://github.com/kennyglins/api-frontend" class="btn">Frontend</a>
+            <a href="https://github.com/kennyglins/api-backend" class="btn">Backend</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======== OUTROS PROJETOS ======== -->
       <div class="project">
         <img src="audiobookjs.jpg" alt="Audiobook em JavaScript" />
         <div class="project-content">
-          <h2>Audiobook em JavaScript</h2>
+          <h3>Audiobook em JavaScript</h3>
           <p>
-            Projeto desenvolvido durante o workshop da Hashtag Treinamentos, com
-            leitura automática e controles de reprodução.
+            Projeto desenvolvido durante o workshop da Hashtag Treinamentos, com leitura automática e controles de reprodução.
           </p>
-          <a href="https://github.com/kennyglins/audiobook-js" class="btn"
-            >Ver Projeto</a
-          >
+          <a href="https://github.com/kennyglins/audiobook-js" class="btn">Ver Projeto</a>
         </div>
       </div>
 
       <div class="project">
         <img src="cardapiodigitalreact.jpg" alt="Cardápio Digital em React" />
         <div class="project-content">
-          <h2>Cardápio Digital em React</h2>
+          <h3>Cardápio Digital em React</h3>
           <p>
-            Interface moderna simulando um app de pedidos online, feita com
-            React, HTML e JavaScript.
+            Interface moderna simulando um app de pedidos online, feita com React, HTML e JavaScript.
           </p>
-          <a
-            href="https://github.com/kennyglins/cardapio-digital-react"
-            class="btn"
-            >Ver Projeto</a
-          >
+          <a href="https://github.com/kennyglins/cardapio-digital-react" class="btn">Ver Projeto</a>
         </div>
       </div>
     </main>
