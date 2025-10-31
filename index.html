@@ -98,11 +98,15 @@
         border-radius: 8px;
         text-decoration: none;
         font-weight: 600;
-        transition: background 0.3s ease;
+        text-align: center;
+        min-width: 120px;
+        transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
       }
 
       .btn:hover {
         background: #00d494;
+        transform: translateY(-2px);
+        box-shadow: 0 0 10px rgba(0, 255, 174, 0.4);
       }
 
       /* ======== OUTROS PROJETOS ======== */
@@ -112,6 +116,10 @@
         overflow: hidden;
         box-shadow: 0 0 15px rgba(0, 255, 174, 0.15);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 460px; /* altura padronizada */
       }
 
       .project:hover {
@@ -125,6 +133,14 @@
         object-fit: cover;
       }
 
+      .project-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+        padding: 1.5rem;
+      }
+
       .project-content h3 {
         color: #00ffae;
         font-size: 1.4rem;
@@ -132,9 +148,7 @@
       }
 
       .project-content p {
-        font-size: 1rem;
-        color: #ddd;
-        margin-bottom: 1rem;
+        flex-grow: 1;
       }
 
       /* ======== FOOTER ======== */
@@ -167,31 +181,8 @@
           font-size: 1.8rem;
         }
         .btn {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background: #00ffae;
-  color: #000;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s ease, transform 0.2s ease;
-  text-align: center;
-  min-width: 120px; /* garante largura mínima uniforme */
-}
-
-.btn:hover {
-  background: #00d494;
-  transform: translateY(-2px);
-}
-
-/* mantém o espaçamento dos botões dentro dos cards iguais */
-.project-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
+          font-size: 0.9rem;
+        }
       }
     </style>
   </head>
